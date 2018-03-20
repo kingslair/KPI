@@ -1,0 +1,67 @@
+var global_activity_db = []
+var createDeepCopy = []
+function Activity() {
+	var user = [];
+	var event = [];
+	var actions = [];
+}
+
+function activity_constrcutor(user, event, actions) {
+	var activity_created = save(user, event, actions);
+	createDeepCopy.push(activity_created);
+	return activity_created;
+}
+
+function replay(activity_object) {
+	for (var i = 0; i < activity_object.length; i++)
+		if (activity_object[i].event == JSON.stringify("Created Account")) {
+			save(activity_object[i].user, activity_object[i].event, activity_object[i].actions);
+		}
+		else if (activity_object[i].event == JSON.stringify("Deposit Made")) {
+			save(activity_object[i].user, activity_object[i].event, activity_object[i].actions);
+		}			
+		else if (activity_object[i].event == JSON.stringify("Withdraw Made")) {
+			save(activity_object[i].user, activity_object[i].event, activity_object[i].actions);
+		}
+}
+
+
+function save(user, event, actions) {
+	var activity = new Activity();
+	activity.user = JSON.stringify(user);
+	activity.event = JSON.stringify(event);
+	activity.actions = JSON.stringify(actions);
+	Object.freeze(activity);
+	global_activity_db.push(activity);
+	return activity;
+}
+
+function merge() {
+	//TODO
+}
+
+function generateCurrentSnapshot(activity_object) {
+	console.log(JSON.stringify(activity_object));
+}
+
+function getGlobalSnapshot(global_activity_db_array) {
+	console.log(global_activity_db_array);
+}
+
+var new_activity = activity_constrcutor("Abhijeet", "Created Account", "0");
+var new_activity_again = activity_constrcutor("Abhijeet", "Deposit Made", "100");
+var new_activity_again_again = activity_constrcutor("Abhijeet", "Withdraw Made", "50");
+console.log("Activity Read 1\n");
+getGlobalSnapshot(global_activity_db);
+console.log("Reset Activity\n");
+global_activity_db = []
+delete new_activity.event
+delete new_activity.user
+delete new_activity.actions
+console.log("Get");
+generateCurrentSnapshot(new_activity);
+getGlobalSnapshot(global_activity_db);
+console.log("Replay\n");
+replay(createDeepCopy);
+console.log("Activity Read 2\n");
+getGlobalSnapshot(global_activity_db);
