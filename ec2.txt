@@ -1,0 +1,17 @@
+
+OS/Distro	Official AMI
+ssh Username	Legacy / Community / Other AMI
+ssh    Usernames
+Amazon  Linux	ec2-user	
+Ubuntu	ubuntu	root
+Debian	admin	root
+RHEL 6.4 and later	ec2-user	
+RHEL 6.3 and earlier	root	
+Fedora	fedora	ec2-user, root
+Centos	centos	root
+SUSE	ec2-user	root
+BitNami	bitnami	
+TurnKey	root	
+NanoStack	ubuntu	
+FreeBSD	ec2-user	
+OmniOS	root	
