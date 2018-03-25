@@ -1,0 +1,35 @@
+https://buddy.works/guides/how-dockerize-node-application
+
+https://pipelines.puppet.com/docs/tutorials/build-and-deploy-nodejs-with-docker/
+
+https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/
+
+https://blog.kloia.com/deploy-auto-scalable-node-js-application-on-kubernetes-cluster-part-1-f40e622f2337
+
+Deploy Auto-Scalable Node.js Application on Kubernetes Cluster?—?Part 1
+Deploy Auto-Scalable Node.js Application on Kubernetes Cluster?—?Part 2
+https://github.com/huseyinbabal/kubernetes-node-example
+
+https://hackernoon.com/tutorial-creating-and-managing-a-node-js-server-on-aws-part-1-d67367ac5171
+
+https://www.npmjs.com/package/jsonpath
+
+DOCKER ISSUE IN UBUNTU:
+**********************
+
+sudo usermod -aG docker $USER
+Then restart
+
+http://blog.thoward37.me/articles/where-are-docker-images-stored/
+
+REMOVE ALL DOCKER IMAGES:
+************************
+
+# Delete every Docker containers
+# Must be run first because images are attached to containers
+docker rm -f $(docker ps -a -q)
+
+# Delete every Docker image
+docker rmi -f $(docker images -q)
+
+https://davidwalsh.name/docker-remove-all-images-containers
