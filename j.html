@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+	<script>
+		window.onbeforeunload = function() {
+			return "Page is going to reload";
+		}	
+		var jsonStruct = { "KEY1" : "rod" , "KEY2" : "bazinga", "KEY3" : "cool"};
+		var KEY_PARAM = "";
+		var VALUE_PARAM = "";
+		function save(first, second) {
+			var first1 = document.getElementById(first).value;
+			var second1 = document.getElementById(second).value;
+			document.getElementById("t1").value = first1;
+			document.getElementById("t2").value = second1;
+			KEY_PARAM = first;
+			VALUE_PARAM  = second;
+		}
+		function update() {
+			var t1 = document.getElementById("t1").value;
+			var t2 = document.getElementById("t2").value;
+			document.getElementById(KEY_PARAM).value = t1;
+			document.getElementById(VALUE_PARAM).value = t2;
+			jsonStruct[t1] = t2;
+		}
+		function printJson() {
+			document.getElementById("printjson").innerHTML = JSON.stringify(jsonStruct);
+		}
+		function del(first) {
+			var t1 = document.getElementById(first).value;
+			delete jsonStruct[t1];
+		}
+		function sendJson() {
+			document.getElementById("sendjson").innerHTML = JSON.stringify(jsonStruct);
+		}
+	</script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link drop3down-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <input type="text" value="KEY1" id="tr1" name="tr1" disabled="disabled" />
+		<input type="text" value="rod" id="tr2" name="tr2" disabled="disabled" />
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onClick="return save('tr1', 'tr2')">
+		   Edit
+		</button>&emsp; <button class="btn btn-warning" onClick="return del('tr1')">Delete</button><br /><br />
+		<input type="text" value="KEY2" id="tr3" name="tr3" disabled="disabled" />
+		<input type="text" value="bazinga" id="tr4" name="tr4" disabled="disabled" />
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onClick="return save('tr3', 'tr4')">
+		   Edit
+		</button>&emsp; <button class="btn btn-warning" onClick="return del('tr3')">Delete</button><br /><br />
+		<input type="text" value="KEY3" id="tr5" name="tr5" disabled="disabled" />
+		<input type="text" value="cool" id="tr6" name="tr6" disabled="disabled" />
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onClick="return save('tr5', 'tr6')">
+		   Edit
+		</button>&emsp; <button class="btn btn-warning" onClick="return del('tr5')">Delete</button><br /><br />
+		<button class="btn btn-success" onClick="return printJson()">PRINT JSON</button><br /><br />
+		<div id="printjson"></div><br /><br />
+		<button class="btn btn-success" onClick="return sendJson()">SEND</button><br /><br />
+		<div id="sendjson"></div>
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Edit Values</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<input type="text" id="t1" name="t1" disabled="disabled" />
+				<input type="text" id="t2" name="t2" />
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onClick="return update()" data-dismiss="modal">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+      </div>
+
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
