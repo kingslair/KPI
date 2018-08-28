@@ -1,0 +1,511 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<title id="title">Smart Contract Builder</title>
+  <script>
+    var parentJson = {
+      "Tools" : {
+        "Github" : "",
+        "Gitlab" : {
+          "issue" : "gitlab.issue",
+          "pullrequestmergerd" : "gitlab.pullrequestmergerd",
+          "push" : "gitlab.push",
+          "pull" : "gitlab.pull",
+          "pipeline" : "gitlab.pipeline",
+          "build" : "gitlab.build"
+        },
+        "Bitbucket" : "",
+        "JIRA" : {
+          "jira_issue_created"    : "jira.jira_issue_created",
+          "jira_issue_updated"	  : "jira.jira_issue_updated",		 
+          "jira_issue_deleted"	  : "jira.jira_issue_deleted",      
+          "jira_worklog_updated"  : "jira.jira_worklog_updated",			
+          "issuelink_created"		  : "jira.issuelink_created",		   
+          "*issuelink_deleted"		: "jira.issuelink_deleted",
+          "worklog_created"			  : "jira.worklog_created",
+          "worklog_updated"			  : "jira.worklog_updated",
+          "worklog_deleted"       : "jira.worklog_deleted",
+          "comment_created"       : "jira.comment_created",
+          "comment_updated"       : "jira.comment_updated",
+          "comment_deleted"       : "jira.comment_deleted",
+          "project_created"       : "jira.project_created",
+          "project_updated"       : "jira.project_updated",
+          "project_deleted"       : "jira.project_deleted",
+          "jira_version_released" : "jira.jira_version_released",
+          "jira_version_unreleased"      : "jira.jira_version_unreleased",
+          "jira_version_created"         : "jira.jira_version_created",
+          "jira_version_moved"    : "jira.jira_version_moved",
+          "jira_version_updated"  : "jira.jira_version_updated",
+          "jira_version_deleted"  : "jira.jira_version_deleted",
+          "user_created"          : "jira.user_created",
+          "user_updated"          : "jira.user_updated",
+          "user_deleted"          : "jira.user_deleted",
+          "sprint_created"        : "jira.sprint_created",
+          "sprint_deleted"        : "jira.sprint_deleted",
+          "sprint_updated"        : "jira.sprint_updated",
+          "sprint_started"        : "jira.sprint_started",
+          "sprint_closed"         : "jira.sprint_closed",
+          "board_created"         : "jira.board_created",
+          "board_updated"         : "jira.board_updated",
+          "board_deleted"         : "jira.board_deleted",
+          "board_configuration_changed"  : "jira.board_configuration_changed"
+        }
+      }
+    };
+  
+    var jsonToParse = 		[
+{
+  "object_kind": "issue",
+  "user": {
+    "name": "Administrator",
+    "username": "root",
+    "avatar_url": "http://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?s=40\u0026d=identicon"
+  },
+  "project": {
+    "id": 1,
+    "name":"Gitlab Test",
+    "description":"Aut reprehenderit ut est.",
+    "web_url":"http://example.com/gitlabhq/gitlab-test",
+    "avatar_url":null,
+    "git_ssh_url":"git@example.com:gitlabhq/gitlab-test.git",
+    "git_http_url":"http://example.com/gitlabhq/gitlab-test.git",
+    "namespace":"GitlabHQ",
+    "visibility_level":20,
+    "path_with_namespace":"gitlabhq/gitlab-test",
+    "default_branch":"master",
+    "homepage":"http://example.com/gitlabhq/gitlab-test",
+    "url":"http://example.com/gitlabhq/gitlab-test.git",
+    "ssh_url":"git@example.com:gitlabhq/gitlab-test.git",
+    "http_url":"http://example.com/gitlabhq/gitlab-test.git"
+  },
+  "repository": {
+    "name": "Gitlab Test",
+    "url": "http://example.com/gitlabhq/gitlab-test.git",
+    "description": "Aut reprehenderit ut est.",
+    "homepage": "http://example.com/gitlabhq/gitlab-test"
+  },
+  "object_attributes": {
+    "id": 301,
+    "title": "New API: create/update/delete file",
+    "assignee_ids": [51],
+    "assignee_id": 51,
+    "author_id": 51,
+    "project_id": 14,
+    "created_at": "2013-12-03T17:15:43Z",
+    "updated_at": "2013-12-03T17:15:43Z",
+    "position": 0,
+    "branch_name": null,
+    "description": "Create new API for manipulations with repository",
+    "milestone_id": null,
+	    "state": "opened",
+    "iid": 23,
+    "url": "http://example.com/diaspora/issues/23",
+    "action": "open"
+  },
+  "assignees": [ { "User1" : {
+    "name": "User1",
+    "username": "user1",
+    "avatar_url": "http://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?s=40\u0026d=identicon"
+  } },
+  { "User2" : {
+    "name": "User2",
+    "username": "user2",
+    "avatar_url": "http://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?s=40\u0026d=identicon"
+  } } ],
+  "assignee": {
+    "name": "User1",
+    "username": "user1",
+    "avatar_url": "http://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?s=40\u0026d=identicon"
+  },
+  "labels": [{
+    "id": 206,
+    "title": "API",
+    "color": "#ffffff",
+    "project_id": 14,
+    "created_at": "2013-12-03T17:15:43Z",
+    "updated_at": "2013-12-03T17:15:43Z",
+    "template": false,
+    "description": "API related issues",
+    "type": "ProjectLabel",
+    "group_id": 41
+  }],
+  "changes": {
+    "updated_by_id": [null, 1],
+    "updated_at": ["2017-09-15 16:50:55 UTC", "2017-09-15 16:52:00 UTC"],
+    "labels": {
+      "previous": [{
+        "id": 206,
+        "title": "API",
+        "color": "#ffffff",
+        "project_id": 14,
+        "created_at": "2013-12-03T17:15:43Z",
+        "updated_at": "2013-12-03T17:15:43Z",
+        "template": false,
+        "description": "API related issues",
+        "type": "ProjectLabel",
+        "group_id": 41
+      }],
+      "current": [{
+        "id": 205,
+        "title": "Platform",
+        "color": "#123123",
+        "project_id": 14,
+        "created_at": "2013-12-03T17:15:43Z",
+        "updated_at": "2013-12-03T17:15:43Z",
+        "template": false,
+        "description": "Platform related issues",
+        "type": "ProjectLabel",
+        "group_id": 41
+      }]
+    }
+  }
+}
+
+
+
+
+		];
+  </script>
+	<style>
+		body {
+			font-family: Arial;
+			font-size: 95%;
+		}
+		#credit {
+			float: right;
+			color: #909090;
+			padding-right: 10px;
+		}
+		ul.tree li {
+			list-style-type: none;
+			position: relative;
+		}
+		ul.tree li ul {
+			display: none;
+			padding-left: 15px
+		}
+		ul.tree li.open > ul {
+			display: block;
+		}
+		ul.tree li a {
+			color: black;
+			text-decoration: none;
+		}
+		ul.tree li a:before { /* the expand/collapse symbols before each item */
+			height: 1em;
+			font-size: .8em;
+			display: block;
+			position: absolute;
+			left: -1.2em;
+			top: .05em;
+		}
+		ul.tree li > a:not(:last-child):before {
+			content: '+';
+			font-weight: bold;
+		}
+		ul.tree li.open > a:not(:last-child):before {
+			content: '-';
+			font-weight: normal;
+		}
+		ul.tree li.open > a:last-child:before {
+			content: '';
+			font-weight: bold;
+		}
+		ul.tree li:before, ul.tree li:after {
+			position: absolute;
+    	left: -0.7em;
+			border-style: dotted;
+			border-color: #909090;
+			border-width: 0px;
+		}
+		ul.tree li:before {
+			content: "";
+			border-top-width: 1px;
+			height: 0;
+			width: 8px;
+			top: 9px;
+		}
+		ul.tree li:after {
+			content: "";
+			border-left-width: 1px;
+			height: 100%;
+			width: 0px;
+			top: 2px;
+		}
+		ul.tree > li::before {
+    	width: 0px;
+		}
+		ul.tree > li::after {
+    	height: 0px;
+		}
+		ul.tree > li li:last-child:after {
+    	height: 8px;
+		}
+	</style>
+	<script>
+		var selected;
+		var showFocus = function () {
+			selected.firstElementChild.style.color = "SlateBlue";
+		}
+		var hideFocus = function () {
+			selected.firstElementChild.style.color = "";
+		}
+		var clickSelected = function () {
+			selected.firstElementChild.click();
+		}
+		var gotoPrevSibling = function () {
+			hideFocus();
+			if (selected.previousElementSibling) { selected = selected.previousElementSibling; }
+			else if (selected.parentElement.previousElementSibling) {
+				liElems = selected.parentElement.previousElementSibling.getElementsByTagName("li");
+				if (liElems.length) { selected = liElems[0]; }
+			}
+			showFocus();
+		};
+		var gotoNextSibling = function () {
+			hideFocus();
+			if (selected.nextElementSibling) { selected = selected.nextElementSibling; }
+			else if (selected.parentElement.nextElementSibling) {
+				liElems = selected.parentElement.nextElementSibling.getElementsByTagName("li");
+				if (liElems.length) { selected = liElems[0]; }
+			}
+			showFocus();
+		}
+		var gotoFirstChild = function () {
+			hideFocus();
+			firstSub = selected.getElementsByTagName("ul")[0];
+			if (firstSub) {
+				selected = firstSub.getElementsByTagName("li")[0];
+			}
+			showFocus();
+		}
+		var gotoParent = function () {
+			hideFocus();
+			if (selected.parentElement && selected.parentElement.parentElement && selected.parentElement.parentElement.id != "tree") {
+				selected = selected.parentElement.parentElement;
+			}
+			showFocus();
+		}
+		var onLoad = function() {
+      section1.innerHTML = renderJSON(jsonToParse, "child");
+      section2.innerHTML = renderJSON(parentJson, "parent");
+			selected = document.getElementById('tree').firstElementChild.getElementsByTagName("li")[0];
+			showFocus();
+			// 4. click handlers
+			var treeListItems = document.querySelectorAll('ul.tree a');
+			for (var i = 0; i < treeListItems.length; i++) {
+				// click handler
+				treeListItems[i].addEventListener('click', function(e) {
+					var parent = e.target.parentElement;
+					hideFocus();
+					selected = parent;
+					showFocus();
+					var classList = parent.classList;
+					if (classList.contains("open")) { // close the element and its children
+						classList.remove('open');
+						var openChildrenList = parent.querySelectorAll(':scope .open');
+						for (var j = 0; j < openChildrenList.length; j++) {
+							openChildrenList[j].classList.remove('open');
+						}
+					} else { // open the element
+						classList.add('open');
+					}
+				});
+			}
+			// 5. keyboard handler
+			document.addEventListener('keydown', function(e) {
+					switch (e.key) {
+						case "Enter": case " ":
+							actExpandCollapse();
+							break;
+						case "ArrowDown":
+							gotoNextSibling();
+							break;
+						case "ArrowUp":
+							gotoPrevSibling();
+							break;
+						case "ArrowRight":
+							if (selected.classList.contains("open") === false) { clickSelected(); }
+							gotoFirstChild();
+							break;
+						case "ArrowLeft":
+							if (selected.classList.contains("open") === true) { clickSelected(); }
+							gotoParent();
+							break;
+					}
+				});
+		};
+		var expandAll = function() {
+			var allListItems = document.querySelectorAll('ul.tree li');
+			for (var k = 0; k < allListItems.length; k++) {
+				allListItems[k].classList.add("open");
+			}
+		};
+		var collapseAll = function() {
+			window.location.reload();
+		};
+		var EXPAND_ALL = "Expand All";
+		var COLLAPSE_ALL = "Collapse All";
+		var actExpandCollapse = function() {
+			var botton = document.getElementById("expand");
+			if (botton.innerHTML === EXPAND_ALL) {
+				expandAll();
+				botton.innerHTML = COLLAPSE_ALL;
+			} else {
+				collapseAll();
+				botton.innerHTML = EXPAND_ALL;
+			}
+		};
+		var boolCredit = false;
+
+    var alreadyExistPath = [];
+    
+    function parent(oldObj, newObj, key, path) {
+      document.getElementById("itemExists").innerHTML = "";
+      let output = showHideTable( oldObj, newObj, key, path);
+      if(alreadyExistPath.indexOf(output) > -1 ) {
+        document.getElementById("itemExists").innerHTML = "<span class='alert-danger'>Item already exists</span>";
+        return 1;
+      }
+      //console.log(output);
+      alreadyExistPath.push(output);
+      spanOutput = output;
+      if(output.length > 30) {
+        output = output.substring(0,30) + '...';
+      }
+      var getDiv = document.getElementById('forTable');
+      getDiv.innerHTML += '    <table> \
+      <thead style="background-color: lightblue; color: white;"> \
+        <th></th> \
+        <th>JSON Path</th> \
+        <th>Expected Value</th> \
+        <th>Logical Operator</th> \
+      </thead> \
+      <tbody> \
+        <tr> \
+          <td>Context</td> \
+          <td><span title=' + spanOutput + '>' + output + '</span></td> \
+          <td><input type="text" /></td> \
+          <td> \
+            <select> \
+              <option>Choose...</option> \
+              <option>Greater than</option> \
+              <option>Less than</option> \
+              <option>Equals than</option> \
+            </select> \
+          </td> \
+        </tr> \
+        <tr> \
+          <td>State Identifier</td> \
+          <td>' + output + '</td> \
+          <td><input type="text" /></td> \
+          <td> \
+            <select> \
+              <option>Choose...</option> \
+              <option>Greater than</option> \
+              <option>Less than</option> \
+              <option>Equals than</option> \
+            </select> \
+          </td> \
+        </tr> \
+      </tbody> \
+    </table>';
+    getDiv.innerHTML += '<br /><br />';
+    }
+    
+    function getRequiredPacket(key) {
+      let toolName = key;
+      alert(toolName);
+    }
+    
+    function showHideTable( oldObj, newObj, key, path) {
+      var path = path || "x";
+      var output = "";
+      var newPath;
+      for (var item in oldObj) {        
+        // compare the keys and the objects themselves to find a match
+        if (item == key && JSON.stringify(oldObj) == JSON.stringify(newObj)) {
+          // put array indices in brackets
+          if (Array.isArray(newObj))
+            return path + "[" + item + "]";
+          // put strings with spaces, periods, or brackets in brackets
+          else if (item.indexOf(" ") != -1 || item.indexOf(".") != -1 || item.indexOf("[") != -1 || item.indexOf("]") != -1)
+            return path + '["' + item + '"]';
+          // use dot notation for all else
+          else {
+            return path + "." + item;
+            }
+        }
+        else if (typeof oldObj[item] == "object") {
+          if (Array.isArray(oldObj))
+            newPath = path + "[" + item + "]";
+          else if (item.indexOf(" ") != -1 || item.indexOf(".") != -1 || item.indexOf("[") != -1 || item.indexOf("]") != -1)
+            newPath = path + '["' + item + '"]';
+          else
+            newPath = path + "." + item;
+          output = this.showHideTable(oldObj[item], newObj, key, newPath) || output;
+        }
+      }
+      return output;
+    }
+    
+		function renderJSON(obj, which) {
+			var keys = [];
+			var objIsArray = Array.isArray(obj); // check if [..] array. Otherwise, it is an ordinary {..} object
+			jsonText = "";
+			for (var key in obj) {
+					if (typeof obj[key] === 'object') {
+							if (objIsArray === false) { jsonText += "<li><a href='#'>" + key + "</a><ul>"; }
+							jsonText += renderJSON(obj[key], which);
+							if (objIsArray === false) { jsonText += "</ul></li>"; }
+					} else { // obj[key] not object, e.g. just a number or string, or empty
+						if (objIsArray === false) {
+              if(which == "child") {
+							  jsonText += "<li><a href='#' onclick='parent(" + JSON.stringify(jsonToParse) + "," + JSON.stringify(obj) + ",\"" + key + "\")'>" + key;
+              } else {
+                jsonText += "<li><a href='#' onclick='getRequiredPacket(\"" + obj[key] + "\")'>" + key;
+              }
+							if (obj[key]) { //jsonText += ": " + obj[key];
+                              if(obj[key] == null) {
+                                jsonText +=  "NULL";
+                              } else {                              
+                                //jsonText +=  "<button onclick='showHideTable(" + obj + "," + obj[key] + ")'>Add</button>";
+                              }
+                            }
+							jsonText += "</a></li>";
+						} else {
+							jsonText += "<li><a href='#'>";
+							if (obj[key]) { jsonText += obj[key]; } else { jsonText += "(empty)"; }
+							jsonText += "</a></li>";
+						}
+					}
+					keys.push(key);
+			}
+			return jsonText;
+	  }
+	</script>
+</head>
+
+<body onload="onLoad()">
+<div id="itemExists"></div>
+<button class="btn btn-success" style="float: right;  margin-top: 5px; margin-right: 10px;  font-size: 14px;">Submit</button>
+<button class="btn btn-secondary" id="expand" style="float: right; margin-top: 5px; margin-right: 6px; font-size: 14px;" href="#" onClick="actExpandCollapse()" title="Enter or Space key">Expand All</button>
+
+<div style="float: left; width: 100%; padding: 5px;">
+  <div id="tree1" style="float: left; width: 20%; padding: 5px;  height: 800px;  overflow: auto;" class="card">
+     <ul id="section2" class="tree"></ul>
+  </div>
+
+  <div id="tree" style="float: left; width: 25%;  padding: 5px; height: 800px; overflow: auto;" class="card">
+    <ul id="section1" class="tree"></ul>
+    <!--<ul id="section2" class="tree"></ul>-->
+  </div>
+
+  <div id="forTable" style="float: left; width:55%;  padding: 5px;   height: 800px; overflow: auto" class="card">
+  </div>
+</div>
+</body>
+</html>
