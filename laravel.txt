@@ -1,0 +1,28 @@
+INSTALLING APACHE, PHP, LARAVEL, MYSQL IN UBUNTU
+-----------------------------------------
+
+1. https://websiteforstudents.com/install-laravel-php-framework-on-ubuntu-16-04-17-10-18-04-with-apache2-and-php-7-2-support/
+
+2. Give All Permission to all the folders in Laravel
+	sudo chown -R $USER:www-data *
+	chmod -R 775 *
+
+3. https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04
+
+4. https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+	|
+	|-> homestead
+	|-> secret
+
+5. php artisan migrate --env=local //For MySQL changes to take effect 
+
+6. php artisan config:clear // To Clear all cached configs
+
+7. Uncomment the php.ini extension = pdo_mysql.so
+
+8. Also Run -> sudo apt-get install php7.0-mysql
+	//For Mysql to connect with PHP
+
+===============================================================
+
+https://forums.aws.amazon.com/thread.jspa?threadID=271099
