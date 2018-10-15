@@ -26,3 +26,21 @@ INSTALLING APACHE, PHP, LARAVEL, MYSQL IN UBUNTU
 ===============================================================
 
 https://forums.aws.amazon.com/thread.jspa?threadID=271099
+
+
+===============================================================
+
+Frequent Ubuntu Errors.
+##########################
+Increase SWAP Memory
+----------------------
+/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+/sbin/mkswap /var/swap.1
+/sbin/swapon /var/swap.1
+
+PHP REPO
+---------
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php7.2
+###########################
