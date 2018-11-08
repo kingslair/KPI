@@ -44,3 +44,23 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install php7.2
 ###########################
+
+
+###########################
+file_put_contents(<something>): failed to open stream: Permission denied
+
+Solution:
+*********
+Laravel >= 5.4
+--------------
+php artisan cache:clear 
+chmod -R 777 storage/
+composer dump-autoload
+
+Laravel < 5.4
+-------------
+php artisan cache:clear 
+chmod -R 777 app/storage 
+composer dump-autoload
+###########################
+
