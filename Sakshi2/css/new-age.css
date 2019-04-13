@@ -159,9 +159,9 @@ header.masthead {
   padding-bottom: 100px;
   color: white;
   height: 0;
-  background: url("../img/bg-pattern.png"), #7b4397;
+  /*background: url("../img/bg-pattern.png"), #7b4397;
   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#6666FF), to(#00cc99));
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #6666FF, #00cc99);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #6666FF, #00cc99);*/
   /*background: url("../img/core.png"), #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;*/
