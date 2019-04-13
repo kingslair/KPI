@@ -46,21 +46,21 @@ just for appearance; change whatever you want
 
 .slide:nth-of-type(1) {
     background: url(../branding/PaperLamp/1.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide:nth-of-type(2) {
     background: url(../branding/PaperLamp/2.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+    background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide:nth-of-type(3) {
     background: url(../branding/PaperLamp/3.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-position: center; 
+  background-position: center; 
+	background-repeat: no-repeat;
 }
 
 
@@ -104,21 +104,21 @@ just for appearance; change whatever you want
 
 .slide1:nth-of-type(1) {
     background: url(../branding/PaperTableMat/1.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide1:nth-of-type(2) {
     background: url(../branding/PaperTableMat/2.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide1:nth-of-type(3) {
     background: url(../branding/PaperTableMat/3.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 
 
@@ -163,27 +163,27 @@ just for appearance; change whatever you want
 
 .slide2:nth-of-type(1) {
     background: url(../branding/PaperCutlery/1.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide2:nth-of-type(2) {
     background: url(../branding/PaperCutlery/2.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide2:nth-of-type(3) {
     background: url(../branding/PaperCutlery/3.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide2:nth-of-type(4) {
     background: url(../branding/PaperCutlery/4.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 
 
@@ -227,25 +227,25 @@ just for appearance; change whatever you want
 
 .slide3:nth-of-type(1) {
     background: url(../branding/Bookmark/1.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide3:nth-of-type(2) {
     background: url(../branding/Bookmark/4.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide3:nth-of-type(3) {
     background: url(../branding/Bookmark/3.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
 .slide3:nth-of-type(4) {
     background: url(../branding/Bookmark/5.png);
-	background-size: 250px 250px;
-	background-size: cover;
-	background-reapeat: no-repeat;
+	background-size: contain;
+	background-position: center; 
+	background-repeat: no-repeat;
 }
