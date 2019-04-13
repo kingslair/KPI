@@ -18,18 +18,22 @@
   <link href="css/new-age.min.css" rel="stylesheet">
   <link href="eshopper/css/main.css" rel="stylesheet">
   <link href="eshopper/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/slide-master.css" rel="stylesheet">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top text-dark" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger text-dark" href="index.html">Print Paper Scissors</a>
+      <a class="navbar-brand js-scroll-trigger textcolor" href="index.html">Print Paper Scissors</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <!--Menu-->
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-dark" href="index.html#products">Collections</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger text-dark" href="index.html#features">Why us?</a>
           </li>
@@ -46,92 +50,22 @@
 
   <section>
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="left-sidebar">
-						<!--<h2>Category</h2>-->
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-											<span class="badge pull-right"></span>
-											Bookmarks
-										</a>
-									</h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
-											<span class="badge pull-right"></span>
-											Calendar
-										</a>
-									</h4>
-								</div>
-							</div>
-							
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
-											<span class="badge pull-right"></span>
-											Diary
-										</a>
-									</h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Gift boxes</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Jewellary Box</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Cutlery holder</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Table mat</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">File and File Holder</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Visiting cards/Envelopes/Letter Heads</a></h4>
-								</div>
-							</div>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Lamps & Coasters</a></h4>
-								</div>
-							</div>
-						</div><!--/category-products-->
-					</div>
-				</div>
-				
-				<div class="col-sm-9 padding-right">
+			<div class="row">			
+				<div class="col-sm-12 padding-right">
 					<div class="features_items"><!--features_items-->
 						<!--<h2 class="title text-center">Features Items</h2>-->
 						<div class="row">
 							<div class="col-sm-4">
 								<div class="product-image-wrapper">
 									<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="branding/PaperLamp/1.png" alt="" style="width:250px; height:250px" />
+											<div class="productinfo text-center">												
+												<ul id="slides">
+													<li class="slide showing"></li>
+													<li class="slide"></li>
+													<li class="slide"></li>
+												</ul>
 												<h5>Minimum Quantity: 50 P</h5>
-												<p>Paper Lamp with Stars</p>
+												<p>Paper Lamps</p>
 												<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
 											</div>
 									</div>
@@ -141,9 +75,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="branding/PaperTableMat/3.png" alt=""  style="width:250px; height:250px"  />
+											<ul id="slides1">
+												<li class="slide1 showing1"></li>
+												<li class="slide1"></li>
+												<li class="slide1"></li>
+											</ul>
 											<h5>Minimum Quantity: 50 P</h5>
-											<p>Paper Table Mat - Thanksgiving</p>
+											<p>Paper Table Mats</p>
 											<!--<div class="cart_quantity_button">
 												<a class="cart_quantity_up" href=""> + </a>
 												<input class="cart_quantity_input" type="text" name="quantity" value="50" autocomplete="off" size="2">
@@ -158,9 +96,13 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="branding/PaperTableMat/1.png" alt=""  style="width:250px; height:250px" />
+											<ul id="slides2">
+												<li class="slide2 showing2"></li>
+												<li class="slide2"></li>
+												<li class="slide2"></li>
+											</ul>
 											<h5>Minimum Quantity: 50 P</h5>
-											<p>Paper Table Mat</p>
+											<p>Cutlery's</p>
 											<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
 										</div>
 									</div>
@@ -170,114 +112,19 @@
 								<div class="product-image-wrapper">
 									<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="branding/Bookmark/3.png" alt=""  style="width:250px; height:250px" />
+											<ul id="slides3">
+												<li class="slide3 showing3"></li>
+												<li class="slide3"></li>
+												<li class="slide3"></li>
+											</ul>
 											<h5>Minimum Quantity: 50 P</h5>
-											<p>Bookmark Cutlery</p>
+											<p>Bookmarks</p>
 											<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
 										</div>
 										<!--<img src="images/home/new.png" class="new" alt="" />-->
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-4">
-								<div class="product-image-wrapper">
-									<div class="single-products">
-										<div class="productinfo text-center">
-											<img src="branding/Bookmark/5.png" alt="" style="width:250px; height:250px"  />
-											<h5>Minimum Quantity: 50 P</h5>
-											<p>Bookmark Tags</p>
-											<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
-										</div>
-										<!--<img src="images/home/sale.png" class="new" alt="" />-->
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="branding/PaperLamp/3.png" alt=""  style="width:250px; height:250px"  />
-										<h5>Minimum Quantity: 50 P</h5>
-										<p>Paper Lamps</p>
-										<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- -->
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="branding/PaperLamp/2.png" alt=""  style="width:250px; height:250px"  />
-										<h5>Minimum Quantity: 50 P</h5>
-										<p>Paper Lamp Flowrel</p>
-										<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
-									</div>
-								</div>
-							</div>
-						</div>
-							<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="branding/PaperTableMat/2.png" alt=""  style="width:250px; height:250px"  />
-										<h5>Minimum Quantity: 50 P</h5>
-										<p>Paper Table Mat Custom</p>
-										<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
-									</div>
-								</div>
-							</div>
-						</div>
-							<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="branding/PaperCutlery/4.png" alt=""  style="width:250px; height:250px"  />
-										<h5>Minimum Quantity: 50 P</h5>
-										<p>Cutlery Custom</p>
-										<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
-									</div>
-								</div>
-							</div>
-						</div>
-							<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="branding/PaperCutlery/1.png" alt=""  style="width:250px; height:250px"  />
-										<h5>Minimum Quantity: 50 P</h5>
-										<p>Standard Cutlery</p>
-										<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
-									</div>
-								</div>
-							</div>
-						</div>
-							<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="branding/PaperCutlery/2.png" alt=""  style="width:250px; height:250px"  />
-										<h5>Minimum Quantity: 50 P</h5>
-										<p>Cutlery Multi Coloured</p>
-										<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
-									</div>
-								</div>
-							</div>
-						</div>
-							<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="branding/PaperCutlery/3.png" alt=""  style="width:250px; height:250px"  />
-										<h5>Minimum Quantity: 50 P</h5>
-										<p>Cutlery with Pouches</p>
-										<a href="checkout.html" class="btn btn-default add-to-cart"><i class="fa fa-phone"></i>Contact</a>
-									</div>
-								</div>
-							</div>
-						</div>						
-						<!-- -->
 						</div>
 					</div><!--features_items-->
 		
@@ -314,7 +161,7 @@
   <script src="eshopper/js/price-range.js"></script>
   <script src="eshopper/js/jquery.prettyPhoto.js"></script>
   <script src="eshopper/js/main.js"></script>
-
+  <script src="js/slide-master.js"></script>
 </body>
 
 </html>
