@@ -10,23 +10,23 @@
 
   <title>Print Paper Scissors</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <link href="css/new-age.css" rel="stylesheet">
   <link href="dist/css/justifiedGallery.min.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
+  <!--<link href="css/custom.css" rel="stylesheet">-->
 </head>
 
 <body id="page-top">
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger textcolor" href="#page-top">Print Paper Scissors</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><i class="fa fa-print"></i> <i class="fa fa-file"></i> <i class="fa fa-scissors"></i></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <!--Menu-->
-        <i class="fas fa-bars"></i>
+        <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
@@ -34,19 +34,19 @@
             <a class="nav-link js-scroll-trigger" href="#download">About</a>
           </li>-->
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-dark" href="#products">Collections</a>
+            <a class="nav-link js-scroll-trigger" href="#products">Collections</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-dark" href="#features">Why us?</a>
+            <a class="nav-link js-scroll-trigger" href="#features">Why us?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger text-dark" href="#contact">Say Hi!</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">Say Hi!</a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="login.html"><i class="fa fa-user"></i></a>
           </li>-->
           <li class="nav-item">
-            <a class="nav-link text-dark" href="shop.html"><i class="fa fa-shopping-cart"></i></a>
+            <a class="nav-link" href="shop.html"><i class="fa fa-shopping-cart"></i></a>
           </li>
         </ul>
       </div>
@@ -56,36 +56,20 @@
   <header class="masthead">
     <div class="container h-100">
       <div class="row h-100">
-        <div class="col-lg-7 text-center my-auto">
-          <div class="header-content mx-auto">
-            <h1 class="mb-5 text-dark">Finest collection of Papers Products like never before!<br /> Buy. Customize.</h1>
-            <!--<a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start Now</a>-->
-			<a href="shop.html" class="btn btn-outline-primary btn-xl js-scroll-trigger">Shop Now</a>
-          </div>
-        </div>
-		<div class="col-lg-5 my-auto" id="pps">
+        <div class="col-lg-12 text-center my-auto">
+          <div class="mx-auto">
 			<div>
-				<img alt="Print Paper Scissors" src="img/core.png" class="img-fluid" style="width:100%; height:100%;"/>
+				<h1 style="font-size: 4em;">Print Paper Scissors</h1>
 			</div>
-		</div>
-          <!--<div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
-              <div class="device">
-                <div class="screen">
-                  <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="button">
-                </div>
-              </div>
-            </div>
-          </div>-->
-       
+            <h1 class="mb-5">Finest collection of Papers Products like never before!<br /> Buy. Customize.</h1>
+			<a href="shop.html" class="btn btn-outline btn-xl js-scroll-trigger">Shop Now</a>
+          </div>
+        </div>       
       </div>
     </div>
   </header>
-  
 
-   <section class="download" id="products">
+  <section class="download" id="products">
 	   <div class="container">
 	   <div class="section-heading text-center">
 		  <h2>Collections</h2>
@@ -195,18 +179,18 @@
   <section class="contact bg-green" id="contact">
     <div class="container">
       <h3>We would
-        <i class="fas fa-heart" style="color: #F08080"></i>
+        <i class="fa fa-heart" style="color: #F08080"></i>
         to here from you!</h3>
 	  <br />
       <ul class="list-inline list-social">
         <li class="list-inline-item social-twitter">
           <a href="#">
-            <i class="fab fa-instagram"></i>
+            <i class="fa fa-instagram"></i>
           </a>
         </li>
         <li class="list-inline-item social-facebook">
           <a href="#">
-            <i class="fab fa-facebook-f"></i>
+            <i class="fa fa-facebook-f"></i>
           </a>
         </li>
       </ul>
@@ -243,14 +227,6 @@
 		rowHeight : 200, 
 		rel : 'gallery1',
 		margins : 5
-	}).on('jg.complete', function () {
-		$(this).find('a').colorbox({
-			maxWidth : '80%',
-			maxHeight : '80%',
-			opacity : 0.8,
-			transition : 'elastic',
-			current : ''
-		});
 	});
   </script>
 </body>
