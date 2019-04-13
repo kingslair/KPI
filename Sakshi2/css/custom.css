@@ -1,0 +1,19 @@
+  @media (max-width: 501px) {
+	#pps {
+		display: none;
+	}
+  }
+  @media (max-width: 801px) {
+	#pps {
+		display: none;
+	}
+  }
+  @media (max-width: 1001px) {
+	#pps {
+		display: none;
+	}
+  }
+
+.textcolor {
+	color:#800080;
+}
