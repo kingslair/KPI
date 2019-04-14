@@ -17,22 +17,20 @@
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <link href="css/new-age.css" rel="stylesheet">
   <link href="dist/css/justifiedGallery.min.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
+  <!--<link href="css/custom.css" rel="stylesheet">-->
 </head>
-
 <body id="page-top">
-   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-white fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <!--Menu-->
-        <i class="fa fa-bars"></i>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">PPS</a>
+      <button class="navbar-toggler navbar-toggler-right text-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <!--<li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#download">About</a>
-          </li>-->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger text-dark" href="#products">Collections</a>
           </li>
@@ -42,9 +40,6 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger text-dark" href="#contact">Say Hi!</a>
           </li>
-          <!--<li class="nav-item">
-            <a class="nav-link" href="login.html"><i class="fa fa-user"></i></a>
-          </li>-->
           <li class="nav-item">
             <a class="nav-link text-dark" href="shop.html"><i class="fa fa-shopping-cart"></i></a>
           </li>
@@ -52,55 +47,67 @@
       </div>
     </div>
   </nav>
-  
-  <header class="masthead">
-    <div class="container-fluid h-100">
+
+  <header class="masthead bg-white p-3">
+    <div class="container h-100">
       <div class="row h-100">
-        <div class="col-lg-6" style='    display: flex;justify-content: center;align-items: center;background: url("img/bg-pattern.png"), linear-gradient(to left, #6666FF, #00cc99);'>
-          <div class="mx-auto p-4">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
             <h1 class="mb-5">Finest collection of Papers Products like never before!<br /> Buy. Customize.</h1>
-			<a href="shop.html" class="btn btn-outline btn-xl js-scroll-trigger">Shop Now</a>
+            <center><a href="#download" class="btn btn-outline-primary btn-xl js-scroll-trigger">Start Now for Free!</a></center>
+						<br />
           </div>
         </div>
-		<div class="col-lg-6 text-center my-auto" style="background-color:#ffffff;">		
-			<img alt="Bookmark Tags" src="img/core.png" style="width:100%; height:100%" />
-		</div>
+        <div class="col-lg-5 my-auto text-center">
+          <div class="device-container">
+            <div class="device-mockup iphone6_plus portrait white">
+              <div class="device">
+                <div class="screen">
+                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                  <img src="img/core.png" class="img-fluid" alt="">
+                </div>
+                <div class="button">
+                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <section class="download" id="products">
-	   <div class="container">
-	   <div class="section-heading text-center">
-		  <h2>Collections</h2>
-		  <p class="text-muted">Shop Now to View More Products</p>
-		  <hr>
-		</div>
-		<div class="row">
-		<div id="basicExample">
-			<a href="shop.html">
-				<img alt="Bookmark Tags" src="./branding/Bookmark/4.png"/>
-			</a>
-			<a href="shop.html">
-				<img alt="Paper Table Mats" src="./branding/PaperTableMat/3.png"/>
-			</a>
-			<a href="shop.html">
-				<img alt="Paper Lamp" src="./branding/PaperLamp/1.png"/>
-			</a>
-			<a href="shop.html">
-				<img alt="Bookmark Tags" src="./branding/Bookmark/3.png"/>
-			</a>
-			<a href="shop.html">
-				<img alt="Paper Table Mat" src="./branding/PaperTableMat/2.png"/>
-			</a>
-			<a href="shop.html">
-				<img alt="Paper Lamps" src="./branding/PaperLamp/2.png"/>
-			</a>
-		</div>
-		</div>
-	  </div>
+  <section class="download text-center" id="products" style='background: url("img/bg-pattern.png"), linear-gradient(to left, #6666FF, #00cc99, #ffffff);' id="download">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <h2 class="section-heading">Collections</h2>
+          <p>Shop Now to View More Products</p>
+					<div id="basicExample">
+						<a href="shop.html">
+							<img alt="Bookmark Tags" src="./branding/Bookmark/4.png"/>
+						</a>
+						<a href="shop.html">
+							<img alt="Paper Table Mats" src="./branding/PaperTableMat/3.png"/>
+						</a>
+						<a href="shop.html">
+							<img alt="Paper Lamp" src="./branding/PaperLamp/1.png"/>
+						</a>
+						<a href="shop.html">
+							<img alt="Bookmark Tags" src="./branding/Bookmark/3.png"/>
+						</a>
+						<a href="shop.html">
+							<img alt="Paper Table Mat" src="./branding/PaperTableMat/2.png"/>
+						</a>
+						<a href="shop.html">
+							<img alt="Paper Lamps" src="./branding/PaperLamp/2.png"/>
+						</a>
+					</div>
+        </div>
+      </div>
+    </div>
   </section>
-  
+
   <section class="features" id="features">
     <div class="container">
       <div class="section-heading text-center">
@@ -176,7 +183,7 @@
     </div>
   </section>
 
-  <section class="contact bg-green" id="contact">
+  <section class="contact bg-light" id="contact">
     <div class="container">
       <h3>We would
         <i class="fa fa-heart" style="color: #F08080"></i>
@@ -207,6 +214,9 @@
         <li class="list-inline-item">
           <a href="#">Terms</a>
         </li>
+        <li class="list-inline-item">
+          <a href="#">FAQ</a>
+        </li>
       </ul>
     </div>
   </footer>
@@ -219,7 +229,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/new-age.min.js"></script>
+  <script src="js/new-age.min.js"></script>	
   <script src="./dist/js/jquery.justifiedGallery.js"></script>
   <script>
   $("#basicExample").justifiedGallery({
